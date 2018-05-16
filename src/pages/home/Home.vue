@@ -1,7 +1,6 @@
 <template>
 <div>
-  <div class="home">Home Page</div>
-  <router-link to="/list">go to list</router-link>
+  HelloWorld
 </div>
 </template>
 
@@ -11,7 +10,4 @@ export default {
 }
 </script>
 <style>
-  .home{
-    font-size: 50px;
-  }
 </style>
