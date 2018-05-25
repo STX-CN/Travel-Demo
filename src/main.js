@@ -8,14 +8,15 @@ import fastClick from 'fastclick'
 import './assets/styles/reset.css'
 // 解决移动端1px的问题
 import './assets/styles/border.css'
+import './assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })
