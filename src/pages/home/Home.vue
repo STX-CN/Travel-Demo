@@ -1,6 +1,6 @@
 <template>
 <div>
-  <home-header></home-header>
+  <home-header :city="city"></home-header>
   <home-swiper></home-swiper>
   <home-icons></home-icons>
   <home-recommend></home-recommend>
@@ -24,6 +24,11 @@ export default {
     HomeRecommend,
     HomeWeekend
   },
+  data: function () {
+    return {
+      city: ''
+    }
+  },
   mounted: function () {
     this.getHomeInfo()
   },
@@ -33,7 +38,10 @@ export default {
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc: function (res) {
-      console.log(res)
+      res = res.data
+      if (res.ret && res.data) {
+        this.city = res.data.city
+      }
     }
   }
 
