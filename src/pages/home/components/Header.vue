@@ -44,11 +44,13 @@ export default {
       border-radius: .1rem
       color: #ccc
     .header-right
+      height: .64rem
+      line-height: .64rem
       min-width: 1.04rem
-      padding: 0 .1rem
+      padding: 0.1rem
       float: right
       text-align: center
-      color: #fff
+      color: #f00
       .arrow-icon
         margin-left: -.04rem
         font-size: .24rem

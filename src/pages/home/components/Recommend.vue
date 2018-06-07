@@ -2,7 +2,7 @@
 <div>
   <div class="title">热销推荐</div>
   <ul>
-    <li class="item boder-bottom" v-for="item of recommendList" :key="item.id">
+    <li class="item boder-bottom" v-for="item of list" :key="item.id">
       <img class="item-img" :src="item.imgUrl"/>
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -17,28 +17,11 @@
 <script>
 export default{
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data: function () {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/cd/cd5907320e7a1a1a.img.jpg_200x200_6de235db.jpg',
-          title: '中国福州云顶',
-          desc: '福建省福州市永泰县'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/c0/c016dce7a3156fd1.water.jpg_200x200_9e096461.jpg',
-          title: '福清后溪漂流',
-          desc: '福建省福州市福清市'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1804/76/76054ba23d8aba15a3.water.jpg_200x200_d7a548c3.jpg',
-          title: '福建天门山',
-          desc: '福建省福州市永泰县'
-        }
-      ]
     }
   }
 }
